@@ -1,6 +1,7 @@
 
 ## Description
-- This project is created with both HTML (with Javascript) and React Template.
+- This project is created with both HTML (with Javascript) and React Template. 
+- I have try to keep same implementation concept in both template.
 - For CSS framework I have used TailwindCSS.
 
 ## Important Links:
