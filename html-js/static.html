@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Roboto Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Shopping Cart</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              primary: "#364A63",
+              secondary: "#8091A7",
+              purple: "#6576FF",
+            },
+            screens: {
+              "2xl": "1320px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      * {
+        font-family: "Roboto", serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      class="h-auto md:h-[100vh] px-2 sm:px-5 2xl:px-0 py-2 pb-20 sm:py-5 2xl:py-0 max-w-[1320px] mx-auto"
+    >
+      <div class="h-full flex items-center">
+        <div class="flex flex-col md:flex-row items-center gap-5 lg:gap-10">
+          <div class="md:w-1/2">
+            <img
+              src="./assets//purple.jpeg"
+              class="w-full h-auto"
+              alt="product"
+            />
+          </div>
+          <div class="md:w-1/2 flex flex-col gap-3 lg:gap-5">
+            <!-- Product Title -->
+            <h2
+              class="text-2xl sm:text-3xl lg:text-[40px] font-bold text-primary"
+            >
+              Classy Modern Smart watch
+            </h2>
+
+            <div class="flex gap-1">
+              <img src="./assets/star/star-fill.svg" alt="fill star" />
+              <img src="./assets/star/star-fill.svg" alt="fill star" />
+              <img src="./assets/star/star-fill.svg" alt="fill star" />
+              <img src="./assets/star/star-half-fill.svg" alt="fill star" />
+              <img src="./assets/star/star.svg" alt="fill star" />
+              <span class="text-sm text-secondary">(2 Reviews)</span>
+            </div>
+
+            <!-- Price -->
+            <h3>
+              <span class="text-lg lg:text-xl text-secondary line-through"
+                >$99.00</span
+              >
+              <span class="text-xl lg:text-2xl font-bold text-purple"
+                >$79.00</span
+              >
+            </h3>
+            <!-- Description -->
+            <p class="text-base lg:text-lg text-secondary">
+              I must explain to you how all this mistaken idea of denoun cing
+              ple praising pain was born and I will give you a complete account
+              of the system, and expound the actual teaching.
+            </p>
+
+            <!-- Type & Model -->
+            <div class="flex gap-10">
+              <div>
+                <p class="text-secondary text-xs lg:text-sm">Type</p>
+                <p class="text-sm lg:text-base font-bold text-primary">Watch</p>
+              </div>
+              <div>
+                <p class="text-secondary text-xs lg:text-sm">Model Number</p>
+                <p class="text-sm lg:text-base font-bold text-primary">
+                  Forerunner 290XT
+                </p>
+              </div>
+            </div>
+            <!-- Colors -->
+            <div>
+              <h4 class="text-base lg:text-lg font-bold text-primary">
+                Band Color
+              </h4>
+              <p class="flex flex-wrap gap-3 lg:gap-4 my-2">
+                <button
+                  class="h-[16px] w-[16px] inline-block bg-[#816BFF] rounded-full ring-2 ring-[#816BFF] ring-offset-2"
+                ></button>
+                <button
+                  class="h-[16px] w-[16px] inline-block bg-[#1FCEC9] rounded-full ring-2 ring-[#1FCEC9] ring-offset-2"
+                ></button>
+                <button
+                  class="h-[16px] w-[16px] inline-block bg-[#4B97D3] rounded-full ring-2 ring-[#4B97D3] ring-offset-2"
+                ></button>
+                <button
+                  class="h-[16px] w-[16px] inline-block bg-[#3B4747] rounded-full ring-2 ring-[#3B4747] ring-offset-2"
+                ></button>
+              </p>
+            </div>
+            <!-- Size wise price -->
+            <div>
+              <h4 class="text-base lg:text-lg font-bold text-primary">
+                Wrist Size
+              </h4>
+              <div class="flex flex-wrap gap-3 my-1">
+                <button
+                  class="inline-block px-3 lg:px-4 py-[5px] lg:lg:py-[7px] text-sm border border-purple rounded-[3px]"
+                >
+                  <span class="font-bold text-purple"> S </span>
+                  <span class="text-secondary px-1"> $69 </span>
+                </button>
+                <button
+                  class="inline-block px-3 lg:px-4 py-[5px] lg:lg:py-[7px] text-sm border border-[#DBDFEA] rounded-[3px]"
+                >
+                  <span class="font-bold text-primary"> M </span>
+                  <span class="text-secondary px-1"> $79 </span>
+                </button>
+                <button
+                  class="inline-block px-3 lg:px-4 py-[5px] lg:py-[7px] text-sm border border-[#DBDFEA] rounded-[3px]"
+                >
+                  <span class="font-bold text-primary"> L </span>
+                  <span class="text-secondary px-1"> $89 </span>
+                </button>
+                <button
+                  class="inline-block px-3 lg:px-4 py-[5px] lg:py-[7px] text-sm border border-[#DBDFEA] rounded-[3px]"
+                >
+                  <span class="font-bold text-primary"> XL </span>
+                  <span class="text-secondary px-1"> $99 </span>
+                </button>
+              </div>
+            </div>
+            <!-- Buttons -->
+            <div class="flex items-center flex-wrap gap-3">
+              <!-- counter buttons -->
+              <div class="border rounded-[3px] inline-block">
+                <div class="flex items-center gap-5">
+                  <!-- decrement button -->
+                  <button
+                    class="p-[2px] lg:p-1 text-sm lg:text-[18.2px] font-bold text-secondary border-r-[1px]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5 12h14"
+                      />
+                    </svg>
+                  </button>
+                  <!-- display counter data -->
+                  <span class="text-sm">0</span>
+                  <!-- increment button -->
+                  <button
+                    class="p-[2px] lg:p-1 text-sm lg:text-[18.2px] font-bold text-secondary border-l-[1px]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 4.5v15m7.5-7.5h-15"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <!-- Add to cart Button -->
+              <button
+                class="text-white text-[13px] py-1 lg:py-2 px-4 rounded-[3px] bg-purple hover:bg-purple/80"
+              >
+                Add to Cart
+              </button>
+
+              <!-- Wishlist button -->
+              <button class="text-purple">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div> -->
+      <button
+        class="flex items-center gap-2 fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-[#FFBB5A] py-3 px-6 text-sm font-bold text-primary rounded-full shadow-md hover:bg-[#FFBB5A]/80"
+      >
+        <span>Checkout</span>
+        <span class="bg-white px-1 rounded-md">0</span>
+      </button>
+      <!-- </div> -->
+
+      <!-- Modal -->
+
+      <div
+        id="modalId"
+        class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4"
+        onclick="handleModalBackgroundClick(event)"
+      >
+        <div
+          class="relative top-40 mx-auto shadow-xl rounded-[20px] bg-white max-w-[651px]"
+          onclick="event.stopPropagation()"
+        >
+          <!-- <div class="flex justify-end p-2">
+        <button
+          onclick="closeModal()"
+          type="button"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+      </div> -->
+
+          <div class="p-5 sm:p-10" id="display-cart-item-id"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
