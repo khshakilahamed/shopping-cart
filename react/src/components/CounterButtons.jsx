@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const CounterButtons = ({ quantity, setQuantity }) => {
+const CounterButtons = ({ quantity, setQuantity, setTempStoreData }) => {
   return (
     <div className="border rounded-[3px] inline-block">
       <div className="flex items-center gap-5">
@@ -8,7 +8,17 @@ const CounterButtons = ({ quantity, setQuantity }) => {
           className="p-[2px] lg:p-1 text-sm lg:text-[18.2px] font-bold text-secondary border-r-[1px]"
           onClick={() => {
             if (quantity > 1) {
-              setQuantity((prev) => prev - 1);
+              setQuantity((prev) => {
+
+                const newQuantity = prev - 1;
+                setTempStoreData(prev => {
+                  return {
+                    ...prev,
+                    quantity: newQuantity
+                  }
+                })
+                return newQuantity;
+              });
             }
           }}
         >
@@ -30,7 +40,17 @@ const CounterButtons = ({ quantity, setQuantity }) => {
         {/* <!-- increment button --> */}
         <button
           className="p-[2px] lg:p-1 text-sm lg:text-[18.2px] font-bold text-secondary border-l-[1px]"
-          onClick={() => setQuantity((prev) => prev + 1)}
+          onClick={() => setQuantity((prev) => {
+
+            const newQuantity = prev + 1;
+            setTempStoreData(prev => {
+              return {
+                ...prev,
+                quantity: newQuantity
+              }
+            })
+            return newQuantity;
+          })}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

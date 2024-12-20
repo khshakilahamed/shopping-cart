@@ -288,7 +288,7 @@ const displayCartItems = () => {
                               <img class="rounded-[3px]" width="36" height="36" src="${color?.image}"/>
                               ${product.title}
                         </td>
-                        <td class="text-center">${color.name}</td>
+                        <td class="text-center capitalize">${color.name}</td>
                         <td class="font-bold text-center">${size.size}</td>
                         <td class="font-bold text-center">${quantity}</td>
                         <td class="font-bold text-right">$${price.toFixed(2)}</td>
